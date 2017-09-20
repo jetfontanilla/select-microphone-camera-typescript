@@ -12,7 +12,7 @@ browserMediaDevices.getAudioInputList()
          */
 
         let builtInMicrophone = audioInputDevices[1]; // built-in mic
-        browserMediaDevices.setAudioInput(builtInMicrophone); // store built-in mic
+        browserMediaDevices.setAudioInput(builtInMicrophone); // set built-in mic as preffered source
     });
 
 let startMicRecording = () => {
@@ -29,6 +29,7 @@ let startMicRecording = () => {
         .then(stream => {
             console.log("Media stream", stream);
 
-            // Audio context / processing here
+            // Web Audio processing here
+            // see https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
         });
 };
