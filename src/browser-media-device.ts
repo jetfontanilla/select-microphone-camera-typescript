@@ -77,11 +77,11 @@ export class BrowserMediaDevice {
             return undefined;
         }
 
-        return {
+        return Object.assign({}, device, {
             deviceId: {
                 exact: device.deviceId
             }
-        };
+        });
     }
 
     private isConstraintDisabled(constraint: MediaStreamConstraints, key: string): boolean {
